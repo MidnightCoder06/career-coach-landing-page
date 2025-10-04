@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BreakIntoTech - Alternative Tech Career Paths',
-  description: 'Discover high-paying alternative tech careers that companies are desperately hiring for. Solutions Engineer, Sales Engineer, Technical Writer and more.',
+  title: 'Thrive in Tech - Alternative Tech Career Paths',
+  description: 'Discover high-paying alternative tech careers that companies are desperately hiring for. Solutions Engineer, Sales Engineer, Forward Deployed Engineer and more.',
   keywords: 'tech careers, solutions engineer, sales engineer, technical writer, developer advocate, career transition',
 }
 

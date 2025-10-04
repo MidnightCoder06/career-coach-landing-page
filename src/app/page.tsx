@@ -2,7 +2,6 @@ import Header from "@/components/layout/Header";
 import HeroSection from "@/components/sections/HeroSection";
 import ProblemSection from "@/components/sections/ProblemSection";
 import SolutionSection from "@/components/sections/SolutionSection";
-import SocialProofSection from "@/components/sections/SocialProofSection";
 import CTASection from "@/components/sections/CTASection";
 
 export default function Home() {
@@ -16,9 +15,6 @@ export default function Home() {
         </section>
         <section id="solution">
           <SolutionSection />
-        </section>
-        <section id="success">
-          <SocialProofSection />
         </section>
         <CTASection />
       </main>

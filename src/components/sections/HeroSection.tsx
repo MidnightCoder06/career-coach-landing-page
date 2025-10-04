@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover high-paying alternative tech careers that companies are desperately hiring for. Solutions Engineer, Sales Engineer, Technical Writer and more.
+            Discover high-paying alternative tech careers that companies are desperately hiring for. Solutions Engineer, Sales Engineer, Forward Deployed Engineer and more.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -36,7 +36,7 @@ const HeroSection = () => {
             
             <Button variant="outline" size="lg" className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm">
               <PlayCircle className="mr-2 h-5 w-5" />
-              Watch Success Stories
+              Hear From Our Founder
             </Button>
           </div>
           
@@ -44,11 +44,11 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-foreground/80">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-sm font-medium">500+ Career Transitions</span>
+              <span className="text-sm font-medium">30+ Career Transitions and Counting!</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-sm font-medium">Average 40% Salary Increase</span>
+              <span className="text-sm font-medium">Average 38% Total Comp Increase</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>

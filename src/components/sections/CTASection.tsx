@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Calendar, Shield, Zap, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 const CTASection = () => {
   const benefits = [
@@ -14,7 +15,7 @@ const CTASection = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary relative overflow-hidden">
+    <section className="py-12 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -22,13 +23,9 @@ const CTASection = () => {
         }}></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="flex justify-center px-6 relative z-10">
+        <div className="w-full max-w-4xl text-center">
           <div className="mb-8">
-            <Badge className="bg-accent text-accent-foreground mb-4 px-4 py-2">
-              <Zap className="h-4 w-4 mr-2" />
-              Limited Time Offer
-            </Badge>
             <h2 className="text-display font-bold text-primary-foreground mb-6">
               Ready to Break Into Your Dream Tech Role?
             </h2>
@@ -38,8 +35,8 @@ const CTASection = () => {
             </p>
           </div>
           
-          <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20 mb-8">
-            <CardContent className="p-8">
+          <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20 mb-8 w-full">
+            <CardContent className="py-8 pl-16 pr-12">
               <h3 className="text-2xl font-bold text-primary-foreground mb-6">
                 What You&apos;ll Get in Your Strategy Call:
               </h3>
@@ -76,11 +73,24 @@ const CTASection = () => {
               Immediate actionable insights
             </div>
           </div>
-          
-          <div className="mt-12 text-center">
-            <p className="text-primary-foreground/70 text-sm">
-              Only 5 strategy calls available this week. Book yours before they&apos;re gone.
-            </p>
+        </div>
+      </div>
+      
+      {/* Footer */}
+      <div className="border-t border-primary-foreground/20 mt-12 pt-8 relative z-20">
+        <div className="flex justify-center px-6">
+          <div className="w-full max-w-4xl flex flex-col sm:flex-row justify-between items-center text-primary-foreground/70 text-sm">
+            <div className="mb-4 sm:mb-0">
+              © 2025 More Than A Dev. All rights reserved.
+            </div>
+            <div className="flex gap-6 relative z-10">
+              <Link href="/privacy-policy" className="hover:text-primary-foreground transition-colors cursor-pointer">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-conditions" className="hover:text-primary-foreground transition-colors cursor-pointer">
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const ProblemSection = () => {
     {
       icon: Users,
       title: "Competing Against 1000s",
-      description: "Every junior role receives hundreds of applications, making it nearly impossible to stand out."
+      description: "Every junior role receives hundreds of applications from mid level and senior engineers, making it nearly impossible to stand out."
     },
     {
       icon: AlertTriangle,
@@ -56,7 +56,7 @@ const ProblemSection = () => {
         </div>
         
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-3 bg-warning/10 text-warning-foreground px-6 py-4 rounded-full border border-warning/20">
+          <div className="inline-flex items-center gap-3 bg-warning/10 text-foreground px-6 py-4 rounded-full border border-warning/20 hover-lift transition-all duration-300 hover:bg-warning/15">
             <AlertTriangle className="h-5 w-5 text-warning" />
             <span className="font-medium">The good news? There&apos;s a better way forward.</span>
           </div>
