@@ -75,25 +75,6 @@ const CTASection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Footer */}
-      <div className="border-t border-primary-foreground/20 mt-12 pt-8 relative z-20">
-        <div className="flex justify-center px-6">
-          <div className="w-full max-w-4xl flex flex-col sm:flex-row justify-between items-center text-primary-foreground/70 text-sm">
-            <div className="mb-4 sm:mb-0">
-              © 2025 More Than A Dev. All rights reserved.
-            </div>
-            <div className="flex gap-6 relative z-10">
-              <Link href="/privacy-policy" className="hover:text-primary-foreground transition-colors cursor-pointer">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-conditions" className="hover:text-primary-foreground transition-colors cursor-pointer">
-                Terms & Conditions
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

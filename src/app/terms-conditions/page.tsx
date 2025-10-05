@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function TermsConditions() {
   return (
@@ -117,6 +118,7 @@ export default function TermsConditions() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
