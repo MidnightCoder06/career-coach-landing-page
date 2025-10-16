@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Calendar, Shield, Zap, CheckCircle } from "lucide-react";
+import { ArrowRight, Calendar, Shield, Zap, CheckCircle, PlayCircle } from "lucide-react";
 import Link from "next/link";
 
 const CTASection = () => {
@@ -66,7 +66,7 @@ const CTASection = () => {
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              30-minute time investment
+              15-minute time investment
             </div>
             <div className="flex items-center gap-2">
               <Zap className="h-4 w-4" />

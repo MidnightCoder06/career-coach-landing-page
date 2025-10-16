@@ -1,8 +1,22 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (count < 3) {
+        setCount(count + 1);
+      }
+    }, 500); // Adjust speed as needed
+
+    return () => clearTimeout(timer);
+  }, [count]);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with Overlay */}
@@ -28,31 +42,42 @@ const HeroSection = () => {
             Discover high-paying alternative tech careers that companies are desperately hiring for. Solutions Engineer, Sales Engineer, Forward Deployed Engineer and more.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col gap-4 justify-center items-center mb-12">
             <Button variant="hero" size="lg" className="btn-success group">
               Schedule Your Strategy Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             
             <Button variant="outline" size="lg" className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm">
-              <PlayCircle className="mr-2 h-5 w-5" />
-              Hear From Our Founder
+              Already chatted with our Founder? Get Started today!
             </Button>
           </div>
           
           {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-foreground/80">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-sm font-medium">30+ Career Transitions and Counting!</span>
+          <div className="flex flex-col items-center justify-center gap-6 text-primary-foreground/80">
+            {/* Animated Counter - Centered */}
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm font-medium">
+                  <span className="inline-block min-w-[1ch] text-center font-bold text-lg">
+                    {count}
+                  </span>
+                  {" "}Career Transitions and Counting!
+                </span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-sm font-medium">Average 38% Total Comp Increase</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-sm font-medium">90-Day Job Guarantee</span>
+            
+            {/* Other Stats */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm font-medium">Average 38% Total Comp Increase</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-sm font-medium">90-Day Job Guarantee</span>
+              </div>
             </div>
           </div>
         </div>
