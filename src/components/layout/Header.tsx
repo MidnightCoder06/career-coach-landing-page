@@ -19,8 +19,8 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Centered Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link href="/#problem" className="text-muted-foreground hover:text-foreground transition-colors">
               The Problem
             </Link>
@@ -29,25 +29,14 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Book Strategy Call
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Hamburger Menu Button */}
           <button
-            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
           >
-            {isMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
-            ) : (
-              <Menu className="h-6 w-6 text-foreground" />
-            )}
+            <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></div>
           </button>
         </div>
 
@@ -69,10 +58,6 @@ const Header = () => {
               >
                 Career Paths
               </Link>
-              <Button variant="hero" size="sm" className="mt-4">
-                Book Strategy Call
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
             </nav>
           </div>
         )}
