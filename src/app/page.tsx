@@ -21,7 +21,6 @@ export default function Home() {
           <SolutionSection />
         </section>
         <CTASection />
-        <BreakIntoTechSection />
         <PortfolioSection />
         <FAQSection />
       </main>

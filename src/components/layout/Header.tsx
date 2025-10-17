@@ -49,7 +49,7 @@ const Header = () => {
             <div className="flex-1 flex flex-col justify-start px-12">
               <nav className="space-y-6">
                 <Link
-                  href="#"
+                  href="/how-it-works"
                   className="block group"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -69,7 +69,7 @@ const Header = () => {
                 </Link>
                 
                 <Link
-                  href="#"
+                  href="/events"
                   className="block group"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -83,26 +83,6 @@ const Header = () => {
                       </div>
                       <div className="text-sm text-muted-foreground">
                         Join our community events
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-                
-                <Link
-                  href="#"
-                  className="block group"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
-                      <div className="w-4 h-4 bg-primary rounded"></div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        Social Impact
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        Making a difference together
                       </div>
                     </div>
                   </div>

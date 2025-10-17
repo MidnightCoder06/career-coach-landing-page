@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const CTASection = () => {
   const benefits = [
-    "1-on-1 career strategy session (90 minutes)",
+    "1-on-1 career strategy session (15 minutes)",
     "Personalized career transition roadmap",
     "Resume & LinkedIn optimization guide",
     "Interview preparation for alternative roles",
@@ -27,7 +27,7 @@ const CTASection = () => {
         <div className="w-full max-w-4xl text-center">
           <div className="mb-8">
             <h2 className="text-display font-bold text-primary-foreground mb-6">
-              Ready to Break Into Your Dream Tech Role?
+              Ready to Break Into Your Next Tech Role?
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
               Book a free strategy call and I&apos;ll show you exactly how to position yourself 

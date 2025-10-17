@@ -17,27 +17,23 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Do I need prior technical background to succeed?",
-      answer: "Absolutely not! We welcome career changers from every industry - marketing, sales, finance, education, and beyond. Our curriculum starts with foundational concepts and progressively builds your technical expertise. Many of our most successful graduates came from completely non-technical backgrounds."
+      answer: "Yes, you'll need either software engineering experience or a background in technical consulting. This foundation is essential for understanding the technical concepts and being able to effectively communicate complex solutions to clients and stakeholders in these alternative tech roles."
     },
     {
       question: "What's the advantage of these career paths over traditional coding jobs?",
-      answer: "These roles combine technical skills with business strategy and customer interaction, making them less saturated and more lucrative. You'll enjoy better job security, higher compensation packages, and the opportunity to directly impact business outcomes while using your technical knowledge."
+      answer: "These roles are AI-resistant and represent the future of tech careers. While traditional software engineering positions are shrinking due to automation and market saturation, alternative tech roles like Solutions Engineering and Sales Engineering are experiencing rapid growth and offer better long-term career stability."
     },
     {
       question: "How is this different from other career programs?",
-      answer: "We specialize exclusively in high-demand alternative tech roles rather than traditional programming. Our approach includes strategic career positioning, industry networking, and hands-on experience with real business scenarios. You'll graduate with both skills and connections."
+      answer: "We provide comprehensive personal coaching from your very first day through to negotiating your final job offers. Unlike other programs that leave you to figure things out alone, we guide you through every step of the career transition process with hands-on support and strategic guidance."
     },
     {
       question: "Will I receive personalized guidance and mentorship?",
-      answer: "Absolutely! Each participant gets paired with an experienced industry mentor who provides weekly one-on-one sessions, career strategy development, and ongoing support. You'll also have access to our community of professionals and alumni network."
-    },
-    {
-      question: "What background or qualifications do I need to start?",
-      answer: "The most important qualification is your dedication to making a career change. We accept students from all educational and professional backgrounds. Basic computer literacy is helpful, but we'll guide you through everything else step-by-step."
+      answer: "Yes, our founder will be with you throughout your entire career journey. You'll receive direct, personal guidance and support from day one through landing your new role, ensuring you have expert mentorship every step of the way."
     },
     {
       question: "What's the time commitment and learning format?",
-      answer: "Most students complete the program in 4-8 months, studying 8-15 hours per week. Our flexible format lets you learn around your current schedule - evenings, weekends, or whenever works best. All materials remain accessible indefinitely for future reference."
+      answer: "Our program combines online live instruction with self-paced projects, giving you flexibility while ensuring comprehensive learning. We guarantee you'll land a job within 90 days of program completion, with our structured approach designed to accelerate your career transition."
     }
   ];
 

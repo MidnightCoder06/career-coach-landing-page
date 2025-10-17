@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { SignupModal } from "./SignupModal";
 
 const HeroSection = () => {
   const [count, setCount] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -48,7 +50,12 @@ const HeroSection = () => {
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             
-            <Button variant="outline" size="lg" className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm"
+              onClick={() => setIsModalOpen(true)}
+            >
               Already chatted with our Founder? Get Started today!
             </Button>
           </div>
@@ -89,6 +96,9 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
+      {/* Signup Modal */}
+      <SignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

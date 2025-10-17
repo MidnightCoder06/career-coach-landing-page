@@ -28,11 +28,6 @@ const PortfolioSection = () => {
                 </p>
               </div>
             </div>
-            
-            <Button className="btn-hero" size="lg">
-              View Your Mentor
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </div>
         </div>
       </div>
