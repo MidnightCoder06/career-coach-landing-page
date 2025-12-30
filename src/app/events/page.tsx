@@ -1,11 +1,17 @@
+"use client";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import { SignupModal } from "@/components/sections/SignupModal";
 
 export default function Events() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const events = [
     {
       title: "Admission Info Session",
@@ -40,7 +46,11 @@ export default function Events() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Sign up for an event to learn more about studying at Thrive in Tech or drop in to hear a guest speaker talk about tech trends.
             </p>
-            <Button className="btn-hero" size="lg">
+            <Button 
+              className="btn-hero" 
+              size="lg"
+              onClick={() => setIsModalOpen(true)}
+            >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -106,6 +116,7 @@ export default function Events() {
         </div>
       </main>
       <Footer />
+      <SignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

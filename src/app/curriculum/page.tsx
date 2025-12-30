@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -21,9 +23,12 @@ import {
   Award,
   GraduationCap
 } from "lucide-react";
-import Link from "next/link";
+import { useState } from "react";
+import { SignupModal } from "@/components/sections/SignupModal";
 
 export default function CurriculumPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const hybridRoles = [
     "Forward Deployed Engineer",
     "Business Engineer", 
@@ -194,12 +199,14 @@ export default function CurriculumPage() {
                 high-paying, AI-resistant hybrid roles at top tech companies.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/#signup">
-                  <Button className="btn-hero" size="lg">
-                    Apply Now
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                <Button 
+                  className="btn-hero" 
+                  size="lg"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Apply Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
           </div>
@@ -497,12 +504,15 @@ export default function CurriculumPage() {
                       </div>
                     </div>
                   </div>
-                  <Link href="/#signup">
-                    <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90 flex-shrink-0">
-                      Start Your Journey
-                      <Rocket className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="bg-white text-primary hover:bg-white/90 flex-shrink-0"
+                    onClick={() => setIsModalOpen(true)}
+                  >
+                    Start Your Journey
+                    <Rocket className="ml-2 h-5 w-5" />
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -517,17 +527,20 @@ export default function CurriculumPage() {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Join the next cohort and start your journey to a high-paying, AI-resistant hybrid engineering role.
               </p>
-              <Link href="/#signup">
-                <Button className="btn-hero" size="lg">
-                  Apply Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <Button 
+                className="btn-hero" 
+                size="lg"
+                onClick={() => setIsModalOpen(true)}
+              >
+                Apply Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </section>
       </main>
       <Footer />
+      <SignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

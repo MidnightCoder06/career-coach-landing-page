@@ -1,10 +1,16 @@
+"use client";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Users, BookOpen, Award, Briefcase, Target, TrendingUp } from "lucide-react";
+import { useState } from "react";
+import { SignupModal } from "@/components/sections/SignupModal";
 
 export default function HowItWorks() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const processSteps = [
     {
       number: "1", 
@@ -190,7 +196,12 @@ export default function HowItWorks() {
             <p className="text-xl mb-8 opacity-90">
               Begin your transformation into a thriving tech professional with Thrive in Tech. Access expert mentorship, practical project experience, and comprehensive career placement assistance.
             </p>
-            <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90"
+              onClick={() => setIsModalOpen(true)}
+            >
               Sign Up Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -198,6 +209,7 @@ export default function HowItWorks() {
         </div>
       </main>
       <Footer />
+      <SignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
