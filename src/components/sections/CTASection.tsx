@@ -52,11 +52,13 @@ const CTASection = () => {
           </Card>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button variant="success" size="lg" className="min-w-[280px] group">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule Your Free Strategy Call
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link href="https://calendly.com/jleconte36/30min" target="_blank" rel="noopener noreferrer">
+              <Button variant="success" size="lg" className="min-w-[280px] group">
+                <Calendar className="mr-2 h-5 w-5" />
+                Schedule Your Free Strategy Call
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-primary-foreground/80 text-sm">

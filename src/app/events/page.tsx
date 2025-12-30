@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Users, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Events() {
   const events = [
@@ -94,10 +95,12 @@ export default function Events() {
               <p className="text-muted-foreground mb-8">
                 Pick the date and time that works for you. Our Enrollment Advisors can answer any questions and help you with your next steps.
               </p>
-              <Button className="btn-hero" size="lg">
-                Schedule a 1:1 Call with an Advisor
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="https://calendly.com/jleconte36/30min" target="_blank" rel="noopener noreferrer">
+                <Button className="btn-hero" size="lg">
+                  Schedule a 1:1 Call with an Advisor
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

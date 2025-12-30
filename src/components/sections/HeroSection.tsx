@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { SignupModal } from "./SignupModal";
 
@@ -45,10 +46,12 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="lg" className="btn-success group">
-              Schedule Your Strategy Call
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link href="https://calendly.com/jleconte36/30min" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg" className="btn-success group">
+                Schedule Your Strategy Call
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             
             <Button 
               variant="outline" 
