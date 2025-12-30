@@ -47,7 +47,7 @@ export const SignupModal = ({ isOpen, onClose }: SignupModalProps) => {
       if (data.url) {
         window.location.href = data.url;
       }
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again.");
       setIsLoading(false);
     }

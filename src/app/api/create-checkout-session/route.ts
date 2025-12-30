@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
               name: "Course Signup",
               description: "Stop trying to just survive AI. Use it to your advantage to thrive.",
             },
-            unit_amount: 100, // $1.00 in cents (change to 65000 for $650)
+            unit_amount: 65000, // $650.00 in cents
           },
           quantity: 1,
         },
@@ -39,10 +39,11 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ sessionId: session.id, url: session.url });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error creating checkout session:", error);
+    const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred";
     return NextResponse.json(
-      { error: error.message },
+      { error: errorMessage },
       { status: 500 }
     );
   }

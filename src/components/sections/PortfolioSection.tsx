@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-
 const PortfolioSection = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-muted/30 to-secondary/20">

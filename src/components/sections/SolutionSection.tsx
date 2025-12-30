@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, DollarSign, TrendingUp, Briefcase, Zap } from "lucide-react";
+import { ArrowRight, Briefcase, Zap } from "lucide-react";
 import Link from "next/link";
 
 const SolutionSection = () => {

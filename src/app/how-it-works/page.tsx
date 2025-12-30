@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Users, BookOpen, Award, Briefcase, Target, TrendingUp } from "lucide-react";
+import { CheckCircle, ArrowRight, Users, Briefcase, Target } from "lucide-react";
 import { useState } from "react";
 import { SignupModal } from "@/components/sections/SignupModal";
 

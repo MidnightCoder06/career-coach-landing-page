@@ -4,7 +4,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import ProblemSection from "@/components/sections/ProblemSection";
 import SolutionSection from "@/components/sections/SolutionSection";
 import CTASection from "@/components/sections/CTASection";
-import BreakIntoTechSection from "@/components/sections/BreakIntoTechSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import FAQSection from "@/components/sections/FAQSection";
 
