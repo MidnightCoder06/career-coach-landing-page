@@ -17,12 +17,40 @@ export const SignupModal = ({ isOpen, onClose }: SignupModalProps) => {
     currentTitle: "",
     referralSource: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Add form submission logic
-    onClose();
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      // Create checkout session
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.error) {
+        setError(data.error);
+        setIsLoading(false);
+        return;
+      }
+
+      // Redirect to Stripe Checkout
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
@@ -138,13 +166,21 @@ export const SignupModal = ({ isOpen, onClose }: SignupModalProps) => {
             </select>
           </div>
 
+          {/* Error Message */}
+          {error && (
+            <div className="text-red-600 text-sm text-center p-2 bg-red-50 rounded">
+              {error}
+            </div>
+          )}
+
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 mt-6"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
             size="lg"
+            disabled={isLoading}
           >
-            Get Started Now
+            {isLoading ? "Processing..." : "Get Started Now"}
           </Button>
         </form>
       </div>

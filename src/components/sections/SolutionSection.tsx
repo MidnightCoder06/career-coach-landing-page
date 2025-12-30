@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, DollarSign, TrendingUp, Briefcase, Zap } from "lucide-react";
+import Link from "next/link";
 
 const SolutionSection = () => {
   const careers = [
@@ -132,10 +133,12 @@ const SolutionSection = () => {
               I&apos;ll show you exactly how to position your existing skills for these high-demand roles 
               and help you land interviews within 60 days.
             </p>
-            <Button className="btn-hero" size="lg">
-              View Curriculum
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/curriculum">
+              <Button className="btn-hero" size="lg">
+                View Curriculum
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
