@@ -94,7 +94,7 @@ export default function Events() {
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-12 text-center">
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-6 md:p-12 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-4">
                 ASK A QUESTION
@@ -106,9 +106,9 @@ export default function Events() {
                 Pick the date and time that works for you. Our Enrollment Advisors can answer any questions and help you with your next steps.
               </p>
               <Link href="https://calendly.com/jleconte36/30min" target="_blank" rel="noopener noreferrer">
-                <Button className="btn-hero" size="lg">
+                <Button className="btn-hero text-sm md:text-base" size="lg">
                   Schedule a 1:1 Call with an Advisor
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
                 </Button>
               </Link>
             </div>

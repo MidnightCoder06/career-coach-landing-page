@@ -43,8 +43,8 @@ const Header = () => {
         <div className="fixed inset-0 z-40 bg-white">
           {/* Navigation Content */}
           <div className="flex h-full pt-20">
-            {/* Left side navigation */}
-            <div className="flex-1 flex flex-col justify-start px-12">
+            {/* Navigation - full width on mobile, half on desktop */}
+            <div className="w-full md:flex-1 flex flex-col justify-start px-6 md:px-12">
               <nav className="space-y-6">
                 <Link
                   href="/how-it-works"
@@ -52,7 +52,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-primary rounded"></div>
                     </div>
                     <div>
@@ -72,7 +72,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-primary rounded"></div>
                     </div>
                     <div>
@@ -88,8 +88,8 @@ const Header = () => {
               </nav>
             </div>
             
-            {/* Right side - empty for visual balance */}
-            <div className="flex-1"></div>
+            {/* Right side - hidden on mobile, visible on desktop for balance */}
+            <div className="hidden md:block md:flex-1"></div>
           </div>
         </div>
       )}

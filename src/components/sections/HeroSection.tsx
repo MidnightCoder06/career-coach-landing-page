@@ -56,15 +56,17 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm"
+              className="bg-white/10 text-primary-foreground border-white/30 hover:bg-white/20 backdrop-blur-sm text-sm md:text-base px-4 md:px-6 max-w-[90vw]"
               onClick={() => setIsModalOpen(true)}
             >
-              Already chatted with our Founder? Get Started today!
+              <span className="whitespace-normal text-center leading-tight">
+                Already chatted with our Founder? Get Started today!
+              </span>
             </Button>
           </div>
           
           {/* Trust Indicators */}
-          <div className="flex flex-col items-center justify-center gap-6 text-primary-foreground/80">
+          <div className="flex flex-col items-center justify-center gap-6 text-primary-foreground/80 pb-16 md:pb-0">
             {/* Animated Counter - Centered */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -93,8 +95,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator - Hidden on mobile */}
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2 animate-pulse"></div>
         </div>
