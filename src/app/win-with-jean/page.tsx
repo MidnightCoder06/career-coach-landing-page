@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 
 export default function WinWithJean() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,20 +43,14 @@ export default function WinWithJean() {
       <div className="relative z-10 max-w-lg mx-auto text-center">
         {/* Logo/Brand */}
         <div className="mb-8">
-          <span className="text-2xl font-bold text-white">Thrive in Tech</span>
-        </div>
-
-        {/* Sparkle icon */}
-        <div className="mb-6 flex justify-center">
-          <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
-            <Sparkles className="w-8 h-8 text-accent" />
-          </div>
+          <span className="text-3xl font-bold text-white italic">Not Just A Dev</span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
           Stop Competing for SWE Jobs.
-          <span className="block text-accent mt-2">Start Winning.</span>
+          <span className="block text-accent mt-2">Secure your $100k+/Year Engineering Role With My 9 Week Training Program.</span>
+          <span className="block text-white/90 text-xl md:text-2xl mt-3 font-semibold">Receive Free Support Until You Succeed.</span>
         </h1>
 
         {/* Subheadline */}
