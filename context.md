@@ -41,6 +41,7 @@ Instagram/TikTok Bio Link
 - Mobile-first design optimized for Instagram/TikTok in-app browsers
 - Blue gradient background matching brand
 - Brand name: "Not Just A Dev" (larger, italic)
+- Embedded video (autoplay, muted, loop): `https://ctaskz133kpkzzal.public.blob.vercel-storage.com/3D88202B-5B73-44A4-911C-730910E637F8.MP4`
 - Compelling headline: 
   - "Stop Competing for SWE Jobs."
   - "Secure your $100k+/Year Engineering Role With My 9 Week Training Program." (green accent)
@@ -77,17 +78,54 @@ https://calendly.com/jleconte36/30min?name=FirstName%20LastName
 - Video section with mock video frames (to be replaced with real videos)
 - Social media links at bottom (Instagram, X, LinkedIn, TikTok)
 
-**Videos (mock placeholders):**
-1. "Why Hybrid Roles Are the Future" (3:24)
-2. "How I Landed My First $150K Offer" (5:12)
+**YouTube Shorts Embeds:**
+1. "Which AI Model Should You Be Using Right Now" - https://www.youtube.com/shorts/SUTDqFiLdPc
+2. "Meta Buys Manus AI for $2 Billion" - https://www.youtube.com/shorts/UsjxhnGdmFQ
+
+Videos are embedded with 9:16 aspect ratio (vertical Shorts format). Views count on YouTube.
 
 **Social Links:**
 - Instagram: https://www.instagram.com/techwithjean/
 - X (Twitter): https://x.com/IiLeconte
 - LinkedIn: https://www.linkedin.com/in/jean-leconte-ii/
 - TikTok: https://www.tiktok.com/@emperor_leconte
+- YouTube: https://www.youtube.com/@digitalnomadtechbro
 
 All links open in new tab (`target="_blank"`).
+
+
+---
+
+## Video Hosting (Landing Page)
+
+For the landing page (`/win-with-jean`), videos are hosted on Vercel Blob.
+
+### Upload UI
+
+**URL:** `https://www.notjustadev.com/upload-video` (not linked from main site)
+
+**Features:**
+- Drag/click to select video file
+- Upload button
+- Shows progress
+- Displays URL with copy button
+- Video preview after upload
+
+### Setup Required
+
+1. Install dependency: `npm install @vercel/blob`
+2. Create Blob Store in Vercel Dashboard → Storage
+3. Add `BLOB_READ_WRITE_TOKEN` to:
+   - `.env.local` (for local dev)
+   - Vercel project environment variables (for production)
+
+### Alternative: Command Line Script
+
+**Script:** `scripts/upload-video.ts`
+
+```bash
+BLOB_READ_WRITE_TOKEN=your_token npx tsx scripts/upload-video.ts /path/to/video.mp4
+```
 
 ---
 

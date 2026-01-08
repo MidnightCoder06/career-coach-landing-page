@@ -1,14 +1,14 @@
-import { CheckCircle, Calendar, Play } from "lucide-react";
+import { CheckCircle, Calendar } from "lucide-react";
 
 export default function Scheduled() {
-  const mockVideos = [
+  const videos = [
     {
-      title: "Why Hybrid Roles Are the Future",
-      duration: "3:24"
+      id: "SUTDqFiLdPc",
+      title: "Which AI Model Should You Be Using Right Now"
     },
     {
-      title: "How I Landed My First $150K Offer",
-      duration: "5:12"
+      id: "UsjxhnGdmFQ",
+      title: "Meta Buys Manus AI for $2 Billion"
     }
   ];
 
@@ -75,23 +75,23 @@ export default function Scheduled() {
             Check out some videos I made talking more about the opportunity ahead of us:
           </p>
 
-          {/* Mock Video Frames */}
+          {/* YouTube Shorts Embeds */}
           <div className="space-y-4">
-            {mockVideos.map((video, index) => (
+            {videos.map((video, index) => (
               <div 
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/15 transition-colors cursor-pointer group"
+                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden"
               >
-                {/* Video Thumbnail Placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative flex items-center justify-center">
-                  {/* Play Button */}
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                  </div>
-                  {/* Duration Badge */}
-                  <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                    {video.duration}
-                  </div>
+                {/* YouTube Shorts Embed - 9:16 aspect ratio */}
+                <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
                 {/* Video Title */}
                 <div className="p-4">
@@ -133,6 +133,13 @@ export default function Scheduled() {
             <a href="https://www.tiktok.com/@emperor_leconte" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+              </svg>
+            </a>
+            
+            {/* YouTube */}
+            <a href="https://www.youtube.com/@digitalnomadtechbro" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
           </div>

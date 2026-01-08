@@ -46,8 +46,22 @@ export default function WinWithJean() {
 
       <div className="relative z-10 max-w-lg mx-auto text-center">
         {/* Logo/Brand */}
-        <div className="mb-8">
+        <div className="mb-6">
           <span className="text-3xl font-bold text-white italic">Not Just A Dev</span>
+        </div>
+
+        {/* Video */}
+        <div className="mb-6 rounded-2xl overflow-hidden shadow-2xl bg-black/20 mx-auto max-w-xs md:max-w-sm lg:max-w-md">
+          <video 
+            src="https://ctaskz133kpkzzal.public.blob.vercel-storage.com/3D88202B-5B73-44A4-911C-730910E637F8.MP4"
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full"
+            style={{ maxHeight: '400px' }}
+          />
         </div>
 
         {/* Main headline */}
