@@ -9,10 +9,13 @@ export default function WinWithJean() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    phone: "",
+    email: "",
+    location: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -23,9 +26,10 @@ export default function WinWithJean() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Build Calendly URL with prefilled name
+    // Build Calendly URL with prefilled info
     const calendlyUrl = new URL("https://calendly.com/jleconte36/30min");
     calendlyUrl.searchParams.set("name", `${formData.firstName} ${formData.lastName}`);
+    calendlyUrl.searchParams.set("email", formData.email);
     
     // Redirect to Calendly
     window.location.href = calendlyUrl.toString();
@@ -112,7 +116,7 @@ export default function WinWithJean() {
                 Let&apos;s get started
               </h2>
               <p className="text-gray-600">
-                Enter your name to continue
+                Enter your info to continue
               </p>
             </div>
 
@@ -146,8 +150,58 @@ export default function WinWithJean() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="LeConte"
+                  placeholder="Leconte"
                 />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="jean@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
+                  Where are you located?
+                </label>
+                <select
+                  id="location"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
+                >
+                  <option value="">Select an option</option>
+                  <option value="US">U.S.</option>
+                  <option value="International">Not in the U.S.</option>
+                </select>
               </div>
 
               <Button

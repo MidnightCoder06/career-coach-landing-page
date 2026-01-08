@@ -40,13 +40,22 @@ Instagram/TikTok Bio Link
 - Standalone page (no header/footer from main site)
 - Mobile-first design optimized for Instagram/TikTok in-app browsers
 - Blue gradient background matching brand
-- Compelling headline: "Stop Competing for SWE Jobs. Start Winning."
+- Brand name: "Not Just A Dev" (larger, italic)
+- Compelling headline: 
+  - "Stop Competing for SWE Jobs."
+  - "Secure your $100k+/Year Engineering Role With My 9 Week Training Program." (green accent)
+  - "Receive Free Support Until You Succeed."
 - Social proof badges ($110K-$220K roles, 90-day guarantee)
 - "Get Started" CTA button opens modal
 
-**Modal:**
-- Collects: First Name, Last Name
-- On submit: Redirects to Calendly with name pre-filled via URL parameter
+**Modal Form Fields (all required):**
+- First Name
+- Last Name
+- Phone
+- Email
+- Where are you located? (dropdown: "U.S." or "Not in the U.S.")
+
+**On submit:** Redirects to Calendly with name and email pre-filled via URL parameters
 
 **Calendly URL format:**
 ```
@@ -62,6 +71,7 @@ https://calendly.com/jleconte36/30min?name=FirstName%20LastName
 **Purpose:** Thank user after scheduling and provide additional value while keeping them engaged.
 
 **Features:**
+- Brand name: "Not Just A Dev" (larger, italic - matches landing page)
 - Success message with checkmark icon
 - "What to expect on our call" section
 - Video section with mock video frames (to be replaced with real videos)
@@ -70,13 +80,14 @@ https://calendly.com/jleconte36/30min?name=FirstName%20LastName
 **Videos (mock placeholders):**
 1. "Why Hybrid Roles Are the Future" (3:24)
 2. "How I Landed My First $150K Offer" (5:12)
-3. "The #1 Mistake Engineers Make" (2:47)
 
-**Social Links (placeholders):**
-- Instagram: `href="#"` (update when ready)
-- X (Twitter): `href="#"` (update when ready)
-- LinkedIn: `href="#"` (update when ready)
-- TikTok: `href="#"` (update when ready)
+**Social Links:**
+- Instagram: https://www.instagram.com/techwithjean/
+- X (Twitter): https://x.com/IiLeconte
+- LinkedIn: https://www.linkedin.com/in/jean-leconte-ii/
+- TikTok: https://www.tiktok.com/@emperor_leconte
+
+All links open in new tab (`target="_blank"`).
 
 ---
 
@@ -111,10 +122,4 @@ https://www.notjustadev.com/win-with-jean
 
 ---
 
-## TODO
-
-- [ ] Replace mock video frames with real embedded videos
-- [ ] Add real social media profile URLs
-- [ ] Consider adding email collection for future follow-up
-- [ ] Track conversions (optional: add analytics)
 
